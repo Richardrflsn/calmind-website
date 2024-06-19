@@ -1,6 +1,13 @@
-const XSvg = (props) => (
-	<svg aria-hidden='true' viewBox='0 0 24 24' {...props}>
+import calmindLogo from './assets/calmindLogo.png';
 
-	</svg>
+const XSvg = (props) => (
+	<img
+		src={calmindLogo}
+		alt="Calmind Logo"
+		{...props}
+		style={{ width: '100px', height: '100px', ...props.style }}
+	/>
 );
+
+
 export default XSvg;
