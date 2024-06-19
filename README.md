@@ -17,13 +17,25 @@
   code .
 ```
 
-4. Install Dependencies
+5. Setup .env file
+
+```bash
+  MONGO_URI=...
+  PORT=...
+  JWT_SECRET=...
+  NODE_ENV=...
+  CLOUDINARY_CLOUD_NAME=...
+  CLOUDINARY_API_KEY=...
+  CLOUDINARY_API_SECRET=...
+```
+
+6. Install Dependencies
 
 ```bash
   npm run build
 ```
 
-5. Install Dependencies
+7. Install Dependencies
 
 ```bash
   npm run start
