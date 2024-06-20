@@ -1,4 +1,4 @@
-### CALMIND
+## CALMIND
 ##  EMBARK ON YOUR MENTAL HEALTH JOURNEY
 
 Welcome to CALMIND, your companion in the pursuit of mental well-being. Our platform is designed to support your mental health journey with a suite of features tailored to provide comfort, motivation, and professional assistance.
