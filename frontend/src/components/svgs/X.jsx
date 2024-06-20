@@ -1,4 +1,4 @@
-import calmindLogo from './assets/calmindLogo.png';
+import calmindLogo from './calmindLogo.png'
 
 const XSvg = (props) => (
 	<img
