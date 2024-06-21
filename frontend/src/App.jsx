@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 
+import Dashboard from './pages/Home'; 
 import HomePage from "./pages/home/HomePage";
 import SignUpPage from "./pages/auth/signup/SignUpPage";
 import LoginPage from "./pages/auth/login/LoginPage";
@@ -59,6 +60,9 @@ function App() {
         {/* Common component, bc it's not wrapped with Routes */}
         {authUser &&  !hideSidebarAndRightPanel.includes(pathname) && <Sidebar />}
         <Routes>
+          {/* Dashboard Route accessible to all users */}
+          <Route path='/dashboard' element={<Dashboard />} />
+          
           <Route path='/' element={authUser ? <HomePage /> : <Navigate to='/login' />} />
           <Route path='/signup' element={!authUser ? <SignUpPage /> : <Navigate to='/' />} />
           <Route path='/login' element={!authUser ? <LoginPage /> : <Navigate to='/' />} />

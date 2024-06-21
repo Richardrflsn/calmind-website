@@ -20,7 +20,7 @@ const Home = () => {
 					<div className="flex flex-col items-start gap-10 text-white w-[455px] bg-[#118AB2] z-10">
 						<h1 className='bg-inherit absolute top-[-120px] text-5xl font-bold'>CALMIND</h1>
 						<h2 className="text-[55px] font-bold mb-4 bg-[#118AB2]">Embark on Your Mental Health Journey</h2>
-						<NavLink to="/talk-mind">
+						<NavLink to="/login">
 							<button className="w-[170px] text-[25px] py-2 start-here">
 								START HERE
 							</button>
