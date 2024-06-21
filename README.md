@@ -63,12 +63,19 @@ Welcome to CALMIND, your companion in the pursuit of mental well-being. Our plat
   npm run build
 ```
 
-7. Install Dependencies
+# run website
 
+8. run backend
 ```bash
-  npm run start
+  npm run dev
 ```
-The website should now be running at http://localhost:8000
+10. run frontend
+    
+```bash
+  cd frontend
+  npm run dev
+```
+The website should now be running at http://localhost:3000
 
 # Licence
 
