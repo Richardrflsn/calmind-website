@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-      <div className="sticky top-0 left-0 flex z-10 h-[80px] bg-black p-2 justify-between items-center px-[8.5%]">
+      <div className="w-screen sticky top-0 left-0 flex z-10 h-[80px] bg-black p-2 justify-between items-center px-[8.5%]">
         <NavLink to='/'>
           <h3 className="text-white font-bold text-[25px]">CALMIND</h3>
         </NavLink>
