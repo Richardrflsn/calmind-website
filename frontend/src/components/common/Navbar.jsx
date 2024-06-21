@@ -18,7 +18,7 @@ const Navbar = () => {
           </NavLink>
         </nav>
         <button className="navbar-btn rounded-lg w-[75px] h-[41px] center hover:bg-gray-900">
-          <img src="src\assets\sun.png" alt="" className="w-[60%] bg-transparent"/>
+          <img src="/src/assets/sun.png" alt="" className="w-[60%] bg-transparent"/>
         </button>
       </div>
     )
