@@ -56,7 +56,8 @@ function App() {
 
   return (
     <div className="relative">
-      {pathname !== "/login" && pathname !== "/signup" && pathname !=="/dashboard" && <Navbar />}
+    {pathname !== "/login" && pathname !== "/signup" && pathname !=="/dashboard" && <Navbar />}
+    {pathname === '/' ? (
       <div className='flex max-w-6xl mx-auto'>
         {/* Common component, bc it's not wrapped with Routes */}
         {authUser &&  !hideSidebarAndRightPanel.includes(pathname) && <Sidebar />}
@@ -75,7 +76,22 @@ function App() {
         {authUser && !hideSidebarAndRightPanel.includes(pathname) && <RightPanel/>}
         <Toaster/>
       </div>
-    </div>
+    ) : (
+      <Routes>
+        {/* Dashboard Route accessible to all users */}
+        <Route path='/dashboard' element={<Dashboard />} />
+
+        <Route path='/' element={authUser ? <HomePage /> : <Navigate to='/login' />} />
+        <Route path='/signup' element={!authUser ? <SignUpPage /> : <Navigate to='/' />} />
+        <Route path='/login' element={!authUser ? <LoginPage /> : <Navigate to='/' />} />
+        <Route path='/notifications' element={authUser ? <NotificationPage /> : <Navigate to='/login' />} />
+        <Route path='/profile/:username' element={authUser ? <ProfilePage /> : <Navigate to='/login' />} />
+        <Route path='/motivation' element={<MotivationPage />} />
+        <Route path='/talk-therapy' element={<TalkTherapyPage />} />
+      </Routes>
+    )}
+  </div>
+
   )
 }
 
