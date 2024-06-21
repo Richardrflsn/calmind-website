@@ -57,7 +57,7 @@ function App() {
   return (
     <div className="relative">
       {pathname !== "/login" && pathname !== "/signup" && <Navbar />}
-      <div className='flex max-w-6xl'>
+      <div className='flex max-w-6xl w-screen'>
         {/* Common component, bc it's not wrapped with Routes */}
         {authUser &&  !hideSidebarAndRightPanel.includes(pathname) && <Sidebar />}
         <Routes>

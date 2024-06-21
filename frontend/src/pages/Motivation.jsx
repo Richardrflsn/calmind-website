@@ -5,7 +5,7 @@ import MotivationQuoteGenerator from "../components/MotivationQuoteGenerator"
 
 const Motivation = () => {
     return (
-        <div className="motivation mt-8">
+        <div className="motivation mt-8 w-screen">
             <h3 className="text-white text-[35px]">Tell me what you are feeling right now</h3>
             <img src="src\assets\emojis.png" alt="emojis" className="h-auto w-[323px] my-3"/>
             

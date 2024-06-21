@@ -15,7 +15,7 @@ const TalkTherapy = () => {
         <div className="talk-therapy w-screen text-white">
 
             {/* Section 1 */}
-            <div className="w-screen h-screen flex flex-row justify-between pt-5">
+            <div className="w-screen h-screen flex flex-row justify-between items-center pt-5">
                 <div className="pl-5 flex flex-col justify-center">
                     <h1 className="w-[75%] text-[35px] pb-5 font-semibold">Taking care of your mental health is our Priority</h1>
                     <p className="pb-10 w-[50%] text-[25px] text-gray-300">Doctors, therapy -- all in one service 24/7 availability...</p>
