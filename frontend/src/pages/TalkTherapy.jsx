@@ -26,10 +26,10 @@ const TalkTherapy = () => {
                 </div>
             </div>
             {/* Section 2 */}
-            <MainSection scrollToTherapistList={scrollToTherapistList} />
+            <MainSection scrollToTherapistList={scrollToTherapistList} className="w-screen" />
 
             {/* Section 3 */}
-            <div ref={therapistListRef}>
+            <div ref={therapistListRef} className="w-screen">
                 <TherapistList />
             </div>
 

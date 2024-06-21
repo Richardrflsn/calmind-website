@@ -52,18 +52,18 @@ function App() {
     )
   }
 
-  const hideSidebarAndRightPanel = ["/motivation", "/talk-therapy"];
+  const hideSidebarAndRightPanel = ["/motivation", "/talk-therapy", "/dashboard"];
 
   return (
     <div className="relative">
-      {pathname !== "/login" && pathname !== "/signup" && <Navbar />}
-      <div className='flex max-w-6xl w-screen'>
+      {pathname !== "/login" && pathname !== "/signup" && pathname !=="/dashboard" && <Navbar />}
+      <div className='flex max-w-6xl mx-auto'>
         {/* Common component, bc it's not wrapped with Routes */}
         {authUser &&  !hideSidebarAndRightPanel.includes(pathname) && <Sidebar />}
         <Routes>
           {/* Dashboard Route accessible to all users */}
           <Route path='/dashboard' element={<Dashboard />} />
-          
+
           <Route path='/' element={authUser ? <HomePage /> : <Navigate to='/login' />} />
           <Route path='/signup' element={!authUser ? <SignUpPage /> : <Navigate to='/' />} />
           <Route path='/login' element={!authUser ? <LoginPage /> : <Navigate to='/' />} />
