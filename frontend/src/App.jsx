@@ -5,6 +5,8 @@ import SignUpPage from "./pages/auth/signup/SignUpPage";
 import LoginPage from "./pages/auth/login/LoginPage";
 import NotificationPage from "./pages/notification/NotificationPage";
 import ProfilePage from "./pages/profile/ProfilePage";
+import MotivationPage from './pages/Motivation';  
+import TalkTherapyPage from './pages/TalkTherapy';  
 
 import Sidebar from "./components/common/Sidebar";
 import RightPanel from "./components/common/RightPanel";
@@ -48,20 +50,24 @@ function App() {
     )
   }
 
+  const hideSidebarAndRightPanel = ["/motivation", "/talk-therapy"];
+
   return (
     <div className="relative">
       {pathname !== "/login" && pathname !== "/signup" && <Navbar />}
       <div className='flex max-w-6xl mx-auto'>
         {/* Common component, bc it's not wrapped with Routes */}
-        {authUser && <Sidebar />}
+        {authUser &&  !hideSidebarAndRightPanel.includes(pathname) && <Sidebar />}
         <Routes>
           <Route path='/' element={authUser ? <HomePage /> : <Navigate to='/login' />} />
           <Route path='/signup' element={!authUser ? <SignUpPage /> : <Navigate to='/' />} />
           <Route path='/login' element={!authUser ? <LoginPage /> : <Navigate to='/' />} />
           <Route path='/notifications' element={authUser ? <NotificationPage /> : <Navigate to='/login' />} />
           <Route path='/profile/:username' element={authUser ? <ProfilePage /> : <Navigate to='/login' />} />
+          <Route path='/motivation' element={<MotivationPage />} />
+          <Route path='/talk-therapy' element={<TalkTherapyPage />} />
         </Routes>
-        {authUser && <RightPanel/>}
+        {authUser && !hideSidebarAndRightPanel.includes(pathname) && <RightPanel/>}
         <Toaster/>
       </div>
     </div>
