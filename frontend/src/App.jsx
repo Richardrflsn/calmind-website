@@ -7,7 +7,8 @@ import LoginPage from "./pages/auth/login/LoginPage";
 import NotificationPage from "./pages/notification/NotificationPage";
 import ProfilePage from "./pages/profile/ProfilePage";
 import MotivationPage from './pages/Motivation';  
-import TalkTherapyPage from './pages/TalkTherapy';  
+import TalkTherapyPage from './pages/TalkTherapy'; 
+import './App.css' 
 
 import Sidebar from "./components/common/Sidebar";
 import RightPanel from "./components/common/RightPanel";
@@ -56,7 +57,7 @@ function App() {
   return (
     <div className="relative">
       {pathname !== "/login" && pathname !== "/signup" && <Navbar />}
-      <div className='flex max-w-6xl mx-auto'>
+      <div className='flex max-w-6xl'>
         {/* Common component, bc it's not wrapped with Routes */}
         {authUser &&  !hideSidebarAndRightPanel.includes(pathname) && <Sidebar />}
         <Routes>

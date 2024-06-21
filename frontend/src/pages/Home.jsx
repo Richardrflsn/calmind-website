@@ -13,7 +13,7 @@ const Home = () => {
     }
 
 	return (
-		<>
+		<div className='w-screen'>
 			{/* Bagian 1 */}
 			<div className="min-h-screen bg-[#118AB2] flex flex-col justify-center overflow-hidden">
 				<div className="container h-full bg-[#118AB2] flex flex-row items-center justify-between relative pl-14">
@@ -97,7 +97,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-		</>
+		</div>
 	);
 }
 
