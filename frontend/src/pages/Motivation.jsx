@@ -13,7 +13,7 @@ const Motivation = () => {
             <div className="flex flex-row justify-center items-center gap-20">
                 <div className="flex flex-col justify-center items-center gap-5">
                     <h2 className="text-white text-center w-[458px] text-[35px]">Tweets that are relevant to how you feel right now</h2>
-                    <NavLink to='/talk-mind'>
+                    <NavLink to='/'>
                         <button className='see-details-btn btn w-[125px] h-[40px] '>Try Me!</button>
                     </NavLink>
                 </div>
