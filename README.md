@@ -50,13 +50,13 @@ Welcome to CALMIND, your companion in the pursuit of mental well-being. Our plat
 Please use properly
   
 ```bash
-  MONGO_URI=mongodb+srv://richardrflsn:kWiSPSecuH0hKw1b@cluster0.uwkf9v4.mongodb.net/calmind-db?retryWrites=true&w=majority&appName=Cluster0
+  MONGO_URI=
   PORT=8000
-  JWT_SECRET=N7apvyTpLF7+5vLGptGVha0/b7dD3UK6QTDn3IDbAJI=
+  JWT_SECRET=
   NODE_ENV=development
-  CLOUDINARY_CLOUD_NAME=dcqgixuoj
-  CLOUDINARY_API_KEY=162241869914234
-  CLOUDINARY_API_SECRET=hk6flYmw8gth6enywsbC1O0tCkg
+  CLOUDINARY_CLOUD_NAME=
+  CLOUDINARY_API_KEY=
+  CLOUDINARY_API_SECRET=
 ```
 
 6. Install Dependencies
